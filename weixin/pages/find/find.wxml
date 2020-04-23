@@ -1,2 +1,9 @@
-<!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+
+<view>
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}" wx:key="name">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+    </label>
+  </checkbox-group>
+</view>
+

@@ -7,7 +7,12 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    array: [{
+      message: 'foo',
+    }, {
+      message: 'bar'
+    }]
   },
   goHome :function() {
     wx.switchTab({
@@ -15,7 +20,7 @@ Page({
     })
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () { // bindViewTap
     wx.navigateTo({
       url: '../logs/logs'
     })
